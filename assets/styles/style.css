@@ -87,9 +87,10 @@ body {
 
 #about {
     height: 100vh;
+    padding-top: 50px;
 }
 
-#paper {
+#about #paper {
     background-color: whitesmoke;
     width: 65%;
     border-radius: 25px;
@@ -106,9 +107,46 @@ body {
     margin-top: 50px;
 }
 
+#resume {
+    padding-top: 35px;
+}
+
 #paper p {
     font-family: 'Corben', cursive;
     width: 60%;
     text-align: center;
     margin-bottom: 50px;
+}
+
+#resume #paper {
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#resume #header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#resume p {
+    font-family: 'Corben', cursive;
+    font-size: x-large;
+    color: whitesmoke;
+}
+
+#resume a {
+    color: whitesmoke;
+    font-family: 'Corben', cursive;
+    font-size: x-large;
+    margin-right: 30px;
+}
+
+#resume-img {
+    width: 65%;
+    height: 84%;
+    border-radius: 25px;
 }
