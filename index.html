@@ -15,7 +15,7 @@
         <a>Resume</a>
         <a>Contact</a>
     </div>
-    <div id="container-1">
+    <div class="container" id="container-1">
         <div id="name-box">
             <div id="first-name">
                 <h1 class="name">Wesley</h1>
@@ -23,12 +23,48 @@
                     <line x1="50" y1="50" x2="300" y2="50" stroke="white" stroke-linecap="round" stroke-width="10" />
                   </svg>
             </div>
-            <h1 class="name ">Weisenberger</h1>
+            <h1 class="name">Weisenberger</h1>
         </div>
         <p id="subtitle">A Computer Science student at UC Berkeley</p>
 
+        <a href="#about" id="arrow-link">
+            <svg id="arrow" width="100" heigh="100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" preserveAspectRatio="xMaxYMax meet"><defs><clipPath><path fill="#00f" fill-opacity=".514" d="m-7 1024.36h34v34h-34z"/></clipPath><clipPath><path fill="#f5f5f5" fill-opacity=".472" d="m-6 1028.36h32v32h-32z"/></clipPath></defs><path d="m345.44 248.29l-194.29 194.28c-12.359 12.365-32.397 12.365-44.75 0-12.354-12.354-12.354-32.391 0-44.744l171.91-171.91-171.91-171.9c-12.354-12.359-12.354-32.394 0-44.748 12.354-12.359 32.391-12.359 44.75 0l194.29 194.28c6.177 6.18 9.262 14.271 9.262 22.366 0 8.099-3.091 16.196-9.267 22.373" transform="matrix(-.00013.03541.03541.00013 3.02 2.988)" fill="#f5f5f5"/></svg>
+        </a>
+    </div>
+    <div class="container" id="about">
+        <div id="paper">
+            <img id="pfp" src="assets/images/pfp.png">
+            <h3>Hello! Nice to meet you!</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ultrices dui sapien eget mi proin sed libero enim sed. Mauris nunc congue nisi vitae suscipit. Faucibus in ornare quam
+                viverra orci sagittis eu volutpat. Rutrum quisque non tellus orci ac auctor augue. Eu nisl nunc mi ipsum faucibus vitae aliquet. Quis hendrerit dolor magna eget est lorem. Hac habitasse platea dictumst quisque sagittis purus sit amet.
+                Proin sagittis nisl rhoncus mattis rhoncus urna neque. Vestibulum rhoncus est pellentesque elit ullamcorper dignissim cras tincidunt. Non odio euismod lacinia at quis risus. Arcu non sodales neque sodales ut. Sodales ut etiam sit amet
+                nisl purus in mollis. Ridiculus mus mauris vitae ultricies leo integer. Vel pharetra vel turpis nunc eget lorem dolor. Ipsum dolor sit amet consectetur adipiscing elit duis.</p>
+        </div>
     </div>
 
 </body>
+<script src="assets/scripts/anime.min.js"></script>
+<script src="assets/scripts/jquery-3.6.0.min.js"></script>
+<script src="assets/scripts/jquery.lettering-0.6.1.min.js"></script>
+<script src="assets/scripts/script.js"></script>
+
+<script>
+    $(document).ready(function() {
+        $(".name").lettering();
+        $("#subtitle").lettering();
+    });
+</script>
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
 
 </html>

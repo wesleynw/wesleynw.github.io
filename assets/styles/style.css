@@ -27,11 +27,14 @@ body {
     margin-right: 15px;
 }
 
-#container-1 {
+.container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+#container-1 {
     height: 100vh;
 }
 
@@ -60,4 +63,52 @@ body {
     font-family: 'Corben', cursive;
     margin-top: 5px;
     font-size: xx-large;
+}
+
+#arrow {
+    position: absolute;
+    top: 80%;
+    cursor: pointer;
+}
+
+#arrow-link {
+    display: flex;
+    justify-content: center;
+}
+
+[class^="char"] {
+    transition: color 0.25s;
+    cursor: default;
+}
+
+[class^="char"]:hover {
+    color: #2e86c1;
+}
+
+#about {
+    height: 100vh;
+}
+
+#paper {
+    background-color: whitesmoke;
+    width: 65%;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#pfp {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: 50px;
+}
+
+#paper p {
+    font-family: 'Corben', cursive;
+    width: 60%;
+    text-align: center;
+    margin-bottom: 50px;
 }
