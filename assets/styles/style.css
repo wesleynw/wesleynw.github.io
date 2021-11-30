@@ -101,13 +101,19 @@ line:hover {
     justify-content: center;
 }
 
+#name-box span {
+    display: inline-block;
+}
+
 [class^="char"] {
-    transition: color 0.25s;
     cursor: default;
+    transition-property: color, transform;
+    transition-duration: 0.25s;
 }
 
 [class^="char"]:hover {
     color: #2e86c1;
+    transform: scale(1.1) rotate(-12deg);
 }
 
 #about {
