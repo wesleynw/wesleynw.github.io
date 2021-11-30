@@ -10,7 +10,14 @@ var arrow_animation = anime({
     autoplay: true
 })
 
-// document.getElementById("arrow").onmouseenter = arrow_animation.play;
-// document.getElementById("arrow").onmouseleave = arrow_animation.play;
 document.querySelector("#arrow").onmouseenter = arrow_animation.pause;
 document.querySelector("#arrow").onmouseleave = arrow_animation.play;
+
+window.onscroll = function() {
+    if (window.scrollY === 0) {
+        document.getElementById("navbar").style.backgroundColor = "";
+
+    } else {
+        document.getElementById("navbar").style.backgroundColor = "#414141";
+    }
+}
