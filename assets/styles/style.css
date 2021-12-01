@@ -30,14 +30,22 @@ body {
     cursor: pointer;
     margin-left: 15px;
     margin-right: 15px;
-    transition-property: color, scale;
+    transition-property: color, transform;
     transition-duration: 0.25s;
     z-index: 1;
 }
 
 #navbar a:hover {
     color: #45a049;
-    transform: scale(1.05);
+    transform: scale(1.025);
+}
+
+#navbarMain a {
+    display: inline-block;
+}
+
+#navbarMain a:hover {
+    transform: scale(1.025);
 }
 
 #nav-name {
@@ -45,11 +53,14 @@ body {
     opacity: 0;
     position: absolute;
     margin: auto;
-    transition: opacity 0.25s;
+    transition-property: opacity, scale;
+    transition-duration: 0.25s;
 }
 
 #nav-name h3 {
     font-family: 'Corben', cursive;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 #nav-arrow {
