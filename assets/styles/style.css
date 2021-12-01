@@ -258,7 +258,8 @@ input[type=submit]:hover {
 }
 
 footer {
-    font-family: 'Corben', cursive;
+    /* font-family: 'Corben', cursive; */
+    font-family: 'Montserrat', sans-serif;
     color: whitesmoke;
     display: flex;
     flex-direction: row;
