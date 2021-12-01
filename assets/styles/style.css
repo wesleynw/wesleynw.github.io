@@ -99,9 +99,10 @@ body {
 
 #subtitle {
     color: whitesmoke;
-    font-family: 'Corben', cursive;
-    margin-top: 5px;
-    font-size: xx-large;
+    font-family: 'Montserrat', sans-serif;
+    /* font-family: 'Corben', cursive; */
+    margin-top: 20px;
+    font-size: 21pt;
 }
 
 #arrow {
