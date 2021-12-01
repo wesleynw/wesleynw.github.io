@@ -27,7 +27,15 @@ body {
     margin-left: 15px;
     margin-right: 15px;
     transition-property: color, scale;
-    transition-duration: 0.25s;
+    transition-duration: 1s;
+}
+
+#nav-name {
+    opacity: 0;
+    position: absolute;
+    /* left: 50% -; */
+    margin: auto;
+    transition: opacity 0.25s;
 }
 
 #navbar a:hover {

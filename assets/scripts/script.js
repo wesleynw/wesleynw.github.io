@@ -13,11 +13,42 @@ var arrow_animation = anime({
 document.querySelector("#arrow").onmouseenter = arrow_animation.pause;
 document.querySelector("#arrow").onmouseleave = arrow_animation.play;
 
+let leftPosition = false;
+let widthCorrect = document.getElementById("navbarMain").offsetWidth;
+let dist = -window.innerWidth / 2 + widthCorrect / 2 + 20
+
+
 window.onscroll = function() {
     if (window.scrollY === 0) {
         document.getElementById("navbar").style.backgroundColor = "";
 
     } else {
-        document.getElementById("navbar").style.backgroundColor = "#414141";
+        document.getElementById("navbar").style.backgroundColor = "#121212";
+    }
+
+    console.log(window.innerWidth);
+    if (window.scrollY >= 350) {
+        anime({
+            targets: '#navbarMain',
+            translateX: dist,
+            duration: 250
+        })
+        anime({
+            targets: '#nav-name',
+            opacity: 1,
+            duration: 500
+        })
+        leftPosition = true;
+    } else if (leftPosition === true && window.scrollY <= 350) {
+        anime({
+            targets: '#navbarMain',
+            translateX: 0,
+            duration: 250
+        })
+        anime({
+            targets: '#nav-name',
+            opacity: 0,
+            duration: 500
+        })
     }
 }
