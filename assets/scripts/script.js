@@ -25,8 +25,6 @@ window.onscroll = function() {
     } else {
         document.getElementById("navbar").style.backgroundColor = "#121212";
     }
-
-    console.log(window.innerWidth);
     if (window.scrollY >= 350) {
         anime({
             targets: '#navbarMain',
