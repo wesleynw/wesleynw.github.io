@@ -33,9 +33,12 @@ body {
 #nav-name {
     opacity: 0;
     position: absolute;
-    /* left: 50% -; */
     margin: auto;
     transition: opacity 0.25s;
+}
+
+#nav-name h3 {
+    font-family: 'Corben', cursive;
 }
 
 #navbar a:hover {
