@@ -27,7 +27,7 @@ body {
     margin-left: 15px;
     margin-right: 15px;
     transition-property: color, scale;
-    transition-duration: 1s;
+    transition-duration: 0.25s;
 }
 
 #nav-name {
