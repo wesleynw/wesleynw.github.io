@@ -141,7 +141,6 @@ line:hover {
 }
 
 #about {
-    height: 100vh;
     padding-top: 100px;
     justify-content: flex-start;
 }
