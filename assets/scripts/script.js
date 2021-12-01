@@ -26,6 +26,7 @@ window.onscroll = function() {
         document.getElementById("navbar").style.backgroundColor = "#121212";
     }
     if (window.scrollY >= 350) {
+        document.getElementById("nav-name").style.display = "inline";
         anime({
             targets: '#navbarMain',
             translateX: dist,
@@ -38,6 +39,7 @@ window.onscroll = function() {
         })
         leftPosition = true;
     } else if (leftPosition === true && window.scrollY <= 350) {
+        document.getElementById("nav-name").style.display = "none";
         anime({
             targets: '#navbarMain',
             translateX: 0,

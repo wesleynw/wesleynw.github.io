@@ -4,6 +4,10 @@ body {
     background-size: 25%;
 }
 
+#container-1 {
+    height: 100vh;
+}
+
 #navbar {
     position: fixed;
     top: 0px;
@@ -28,9 +32,16 @@ body {
     margin-right: 15px;
     transition-property: color, scale;
     transition-duration: 0.25s;
+    z-index: 1;
+}
+
+#navbar a:hover {
+    color: #45a049;
+    transform: scale(1.05);
 }
 
 #nav-name {
+    display: none;
     opacity: 0;
     position: absolute;
     margin: auto;
@@ -39,11 +50,6 @@ body {
 
 #nav-name h3 {
     font-family: 'Corben', cursive;
-}
-
-#navbar a:hover {
-    color: #45a049;
-    transform: scale(1.05);
 }
 
 #nav-arrow {
@@ -58,10 +64,6 @@ body {
     align-items: center;
     clear: both;
     z-index: 1;
-}
-
-#container-1 {
-    height: 100vh;
 }
 
 #name-box {
