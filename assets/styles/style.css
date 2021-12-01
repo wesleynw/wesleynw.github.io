@@ -193,14 +193,14 @@ line:hover {
 }
 
 #resume p {
-    font-family: 'Corben', cursive;
+    font-family: 'Montserrat', sans-serif;
     font-size: x-large;
     color: whitesmoke;
 }
 
 #resume a {
     color: whitesmoke;
-    font-family: 'Corben', cursive;
+    font-family: 'Montserrat', sans-serif;
     font-size: x-large;
     margin-right: 30px;
 }
