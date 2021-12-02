@@ -26,6 +26,9 @@ window.onscroll = function() {
         document.getElementById("navbar").style.backgroundColor = "#121212";
     }
     if (window.scrollY >= 350) {
+        if (window.innerWidth <= 600) {
+            document.getElementById("navbarMain").style.display = "none";
+        }
         document.getElementById("nav-name").style.display = "inline";
         anime({
             targets: '#navbarMain',
@@ -39,6 +42,9 @@ window.onscroll = function() {
         })
         leftPosition = true;
     } else if (leftPosition === true && window.scrollY <= 350) {
+        if (window.innerWidth <= 600) {
+            document.getElementById("navbarMain").style.display = "inline";
+        }
         document.getElementById("nav-name").style.display = "none";
         anime({
             targets: '#navbarMain',

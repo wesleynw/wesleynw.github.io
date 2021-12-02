@@ -102,6 +102,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     margin-top: 20px;
     font-size: 21pt;
+    text-align: center;
 }
 
 #arrow {
@@ -148,6 +149,7 @@ line:hover {
 #about .paper {
     background-color: whitesmoke;
     width: 65%;
+    display: block;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
@@ -172,7 +174,7 @@ line:hover {
 
 .paper p {
     font-family: 'Corben', cursive;
-    width: 60%;
+    width: 65%;
     text-align: center;
     margin-bottom: 50px;
 }
@@ -302,4 +304,28 @@ footer p {
 
 footer a {
     color: whitesmoke;
+}
+
+@media only screen and (max-width: 600px) {
+    #about .paper {
+        width: 95%;
+    }
+    #resume-img {
+        width: 95%;
+    }
+    #contact .paper {
+        width: 95%;
+    }
+    .contact-form-container {
+        width: 80%;
+    }
+    .name {
+        font-size: 30pt;
+    }
+    #subtitle {
+        font-size: 15pt;
+    }
+    .paper p {
+        width: 80%;
+    }
 }
