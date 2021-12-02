@@ -52,3 +52,17 @@ window.onscroll = function() {
         })
     }
 }
+
+document.getElementById("gform").onsubmit = function() {
+    anime({
+        targets: '#gform',
+        opacity: 0
+    })
+    document.getElementById("gform").style.visibility = "hidden";
+    document.getElementById("form-submitted-message").style.display = "inline";
+
+    anime({
+        targets: '#form-submitted-message',
+        opacity: 1
+    })
+}

@@ -73,6 +73,7 @@
             <h3>Contact Me</h3>
             <div class="contact-form-container">
                 <!-- Thanks to https://github.com/toperkin/staticFormEmails/blob/master/README.md for this idea. -->
+                <h2 id="form-submitted-message">Thank you for your message! I'll get back to you as soon as possible!</h2>
                 <form id="gform" name="gform" action="https://docs.google.com/forms/d/e/1FAIpQLSd664QEX3RsCyJaDVLJF0ocUXemN-UI0pkwZAlz1tv26s-MeA/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
                     <label for="fname">Name</label>
                     <input type="text" id="entry.2043118584" name="entry.2043118584" placeholder="Your name..">
@@ -84,6 +85,7 @@
                     <textarea type="text" id="entry.1465665376" name="entry.1465665376" placeholder="Write something.." style="height:200px"></textarea>
 
                     <input type="submit" value="Submit">
+                    <div style="margin-top: 50px"></div>
 
                 </form>
                 <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
@@ -119,11 +121,6 @@
                 behavior: 'smooth'
             });
         });
-    });
-</script>
-<script type="text/javascript">
-    $('#gform').on('submit', function(e) {
-        $('#gform').append('Your submission has been processed...');
     });
 </script>
 
