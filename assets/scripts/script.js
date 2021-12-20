@@ -21,10 +21,10 @@ window.onscroll = function() {
     let widthCorrect = document.getElementById("navbarMain").offsetWidth;
     let dist = -window.innerWidth / 2 + widthCorrect / 2 + 20
     if (window.scrollY === 0) {
-        document.getElementById("navbar").style.backgroundColor = "";
+        document.getElementById("nav").style.backgroundColor = "";
 
     } else {
-        document.getElementById("navbar").style.backgroundColor = "#121212";
+        document.getElementById("nav").style.backgroundColor = "#121212";
     }
     if (window.scrollY >= 350) {
         if (window.innerWidth <= 600 ||

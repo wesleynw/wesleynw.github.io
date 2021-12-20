@@ -1,17 +1,36 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #121212;
-    background-image: url(../images/bg-2.svg);
-    background-size: 25%;
+    background-color: #addfb3;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='12' viewBox='0 0 20 12'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='charlie-brown' fill='%23ffffff' fill-opacity='0.24'%3E%3Cpath d='M9.8 12L0 2.2V.8l10 10 10-10v1.4L10.2 12h-.4zm-4 0L0 6.2V4.8L7.2 12H5.8zm8.4 0L20 6.2V4.8L12.8 12h1.4zM9.8 0l.2.2.2-.2h-.4zm-4 0L10 4.2 14.2 0h-1.4L10 2.8 7.2 0H5.8z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-size: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#container-1 {
+#front-page {
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-#navbar {
+#front-page a {
+    text-decoration: none;
+}
+
+.content-divider {
+    padding-bottom: 70px;
+}
+
+#nav {
     position: fixed;
     top: 0px;
-    left: 0px;
     width: 100%;
     height: 7.5%;
     z-index: 1;
@@ -22,11 +41,11 @@ body {
     transition: background-color 0.25s;
 }
 
-#navbar a {
+#nav a {
     text-decoration: none;
-    color: whitesmoke;
+    color: #436344;
     font-family: 'Montserrat', sans-serif;
-    font-size: 15pt;
+    font-size: 16pt;
     cursor: pointer;
     margin-left: 15px;
     margin-right: 15px;
@@ -35,16 +54,8 @@ body {
     z-index: 1;
 }
 
-#navbar a:hover {
+#nav a:hover {
     color: #45a049;
-    transform: scale(1.025);
-}
-
-#navbarMain a {
-    display: inline-block;
-}
-
-#navbarMain a:hover {
     transform: scale(1.025);
 }
 
@@ -68,41 +79,25 @@ body {
     height: 50px;
 }
 
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    clear: both;
-    z-index: 1;
-}
-
-#name-box {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-}
-
-.name {
-    color: whitesmoke;
+#name {
+    cursor: pointer;
+    color: #436344;
     font-family: 'Corben', cursive;
-    font-size: 55pt;
+    font-size: 58pt;
     margin: 0px;
+    transition-property: transform, opacity;
+    transition-duration: 0.25s;
 }
 
-#first-name {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+#name:hover {
+    transform: scale(1.015);
+    opacity: 0.85;
 }
 
 #subtitle {
-    color: whitesmoke;
+    color: #436344;
     font-family: 'Montserrat', sans-serif;
-    margin-top: 20px;
-    font-size: 21pt;
-    text-align: center;
+    font-size: 23pt;
 }
 
 #arrow {
@@ -126,39 +121,15 @@ line:hover {
     justify-content: center;
 }
 
-#name-box span {
-    display: inline-block;
-}
-
-[class^="char"] {
-    cursor: default;
-    transition-property: color, transform;
-    transition-duration: 0.25s;
-}
-
-[class^="char"]:hover {
-    color: #2e86c1;
-    transform: scale(1.1) rotate(-12deg);
-}
-
-#about {
-    padding-top: 100px;
-    justify-content: flex-start;
-}
-
-#about .paper {
-    background-color: whitesmoke;
+.content {
+    background-color: #ceecd1;
     width: 65%;
     display: block;
     border-radius: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-}
-
-#about .paper h3 {
-    font-family: 'Corben', cursive;
 }
 
 #pfp {
@@ -168,30 +139,28 @@ line:hover {
     margin-top: 50px;
 }
 
-#resume {
-    padding-top: 55px;
+.content h2 {
+    font-family: 'Corben', cursive;
 }
 
-.paper p {
-    font-family: 'Corben', cursive;
+.content p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
     width: 65%;
     text-align: center;
     margin-bottom: 50px;
 }
 
-#resume .paper {
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#resume #header {
+#resume-header {
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-bottom: -10px;
+    margin: 0;
+}
+
+#resume-header a {
+    margin-right: 15px;
 }
 
 #resume p {
@@ -208,28 +177,13 @@ line:hover {
 }
 
 #resume-img {
-    width: 65%;
+    width: 100%;
     height: 84%;
     border-radius: 25px;
 }
 
-#contact {
-    padding-top: 100px;
-}
-
-#contact .paper {
-    background-color: whitesmoke;
-    width: 65%;
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#contact h3 {
+.content h2 {
     font-family: 'Corben', cursive;
-    font-size: xx-large;
 }
 
 #contact-form {
@@ -291,7 +245,7 @@ input[type=submit]:hover {
 
 footer {
     font-family: 'Montserrat', sans-serif;
-    color: whitesmoke;
+    color: #436344;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -303,29 +257,5 @@ footer p {
 }
 
 footer a {
-    color: whitesmoke;
-}
-
-@media only screen and (max-width: 600px) {
-    #about .paper {
-        width: 95%;
-    }
-    #resume-img {
-        width: 95%;
-    }
-    #contact .paper {
-        width: 95%;
-    }
-    .contact-form-container {
-        width: 80%;
-    }
-    .name {
-        font-size: 30pt;
-    }
-    #subtitle {
-        font-size: 15pt;
-    }
-    .paper p {
-        width: 80%;
-    }
+    color: #436344;
 }
