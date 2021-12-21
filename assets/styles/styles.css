@@ -87,6 +87,7 @@ body {
     margin: 0px;
     transition-property: transform, opacity;
     transition-duration: 0.25s;
+    text-align: center;
 }
 
 #name:hover {
@@ -104,16 +105,6 @@ body {
     position: absolute;
     top: 80%;
     cursor: pointer;
-}
-
-line,
-path {
-    transition: fill 0.25s;
-}
-
-path:hover,
-line:hover {
-    fill: #2e86c1;
 }
 
 #arrow-link {
